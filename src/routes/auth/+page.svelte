@@ -512,7 +512,7 @@
 						id="logo"
 						crossorigin="anonymous"
 						src="{WEBUI_BASE_URL}/static/favicon.png"
-						class=" w-20 rounded-full"
+						class=" w-20 full"
 						alt=""
 					/>
 				</div>
