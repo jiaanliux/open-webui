@@ -22,7 +22,8 @@
 	import DocumentChartBar from '../icons/DocumentChartBar.svelte';
 	import Evaluations from './Settings/Evaluations.svelte';
 	import CodeExecution from './Settings/CodeExecution.svelte';
-	import Tools from './Settings/Tools.svelte';
+import Tools from './Settings/Tools.svelte';
+import TokenUsage from './Settings/TokenUsage.svelte';
 
 	const i18n = getContext('i18n');
 
@@ -33,19 +34,20 @@
 		const pathParts = $page.url.pathname.split('/');
 		const tabFromPath = pathParts[pathParts.length - 1];
 		selectedTab = [
-			'general',
-			'connections',
-			'models',
-			'evaluations',
-			'tools',
-			'documents',
-			'web',
-			'code-execution',
-			'interface',
-			'audio',
-			'images',
-			'pipelines',
-			'db'
+					'general',
+		'connections',
+		'models',
+		'evaluations',
+		'tools',
+		'documents',
+		'web',
+		'code-execution',
+		'interface',
+		'audio',
+		'images',
+		'pipelines',
+		'db',
+		'token-usage'
 		].includes(tabFromPath)
 			? tabFromPath
 			: 'general';
@@ -431,6 +433,33 @@
 			</div>
 			<div class=" self-center">{$i18n.t('Database')}</div>
 		</button>
+
+		<button
+			id="token-usage"
+			class="px-0.5 py-1 min-w-fit rounded-lg flex-1 md:flex-none flex text-left transition {selectedTab ===
+			'token-usage'
+				? ''
+				: ' text-gray-300 dark:text-gray-600 hover:text-gray-700 dark:hover:text-white'}"
+			on:click={() => {
+				selectedTab = 'token-usage';
+			}}
+		>
+			<div class=" self-center mr-2">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					fill="currentColor"
+					class="w-4 h-4"
+				>
+					<path
+						fill-rule="evenodd"
+						d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75ZM9.75 8.25c-.83 0-1.5.67-1.5 1.5v6.75c0 .83.67 1.5 1.5 1.5h.75a1.5 1.5 0 0 0 1.5-1.5V9.75c0-.83-.67-1.5-1.5-1.5h-.75ZM3 13.125c-.83 0-1.5.67-1.5 1.5v3.375c0 .83.67 1.5 1.5 1.5h.75c.83 0 1.5-.67 1.5-1.5V14.625c0-.83-.67-1.5-1.5-1.5H3ZM5.25 6.75c-.83 0-1.5.67-1.5 1.5v3.375c0 .83.67 1.5 1.5 1.5h.75c.83 0 1.5-.67 1.5-1.5V8.25c0-.83-.67-1.5-1.5-1.5h-.75Z"
+						clip-rule="evenodd"
+					/>
+				</svg>
+			</div>
+			<div class=" self-center">Token Usage</div>
+		</button>
 	</div>
 
 	<div class="flex-1 mt-3 lg:mt-0 overflow-y-scroll pr-1 scrollbar-hidden">
@@ -506,6 +535,8 @@
 					toast.success($i18n.t('Settings saved successfully!'));
 				}}
 			/>
+		{:else if selectedTab === 'token-usage'}
+			<TokenUsage />
 		{:else if selectedTab === 'pipelines'}
 			<Pipelines
 				saveHandler={() => {
