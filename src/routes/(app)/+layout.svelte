@@ -42,7 +42,7 @@ import { getModels, getToolServersData } from '$lib/apis';
 
 	import Sidebar from '$lib/components/layout/Sidebar.svelte';
 	import SettingsModal from '$lib/components/chat/SettingsModal.svelte';
-ChangelogModal from '$lib/components/ChangelogModal.svelte';
+	import ChangelogModal from '$lib/components/ChangelogModal.svelte';
 	import AccountPending from '$lib/components/layout/Overlay/AccountPending.svelte';
 // Removed UpdateInfoToast usage
 	import Spinner from '$lib/components/common/Spinner.svelte';
