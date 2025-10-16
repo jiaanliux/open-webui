@@ -275,9 +275,9 @@
 						});
 					}
 
-					if ($isLastActiveTab) {
-						if ($settings?.notificationEnabled ?? false) {
-							new Notification(`${title} • Open WebUI`, {
+                    if ($isLastActiveTab) {
+                        if ($settings?.notificationEnabled ?? false) {
+                            new Notification(`${title} • CasaBot`, {
 								body: content,
 								icon: `${WEBUI_BASE_URL}/static/favicon.png`
 							});
@@ -424,9 +424,9 @@
 			const data = event?.data?.data ?? null;
 
 			if (type === 'message') {
-				if ($isLastActiveTab) {
-					if ($settings?.notificationEnabled ?? false) {
-						new Notification(`${data?.user?.name} (#${event?.channel?.name}) • Open WebUI`, {
+                if ($isLastActiveTab) {
+                    if ($settings?.notificationEnabled ?? false) {
+                        new Notification(`${data?.user?.name} (#${event?.channel?.name}) • CasaBot`, {
 							body: data?.content,
 							icon: data?.user?.profile_image_url ?? `${WEBUI_BASE_URL}/static/favicon.png`
 						});
@@ -571,8 +571,8 @@
 
 		if (backendConfig) {
 			// Save Backend Status to Store
-			await config.set(backendConfig);
-			await WEBUI_NAME.set(backendConfig.name);
+            await config.set(backendConfig);
+            await WEBUI_NAME.set(APP_NAME);
 
 			if ($config) {
 				await setupSocket($config.features?.enable_websocket ?? true);
