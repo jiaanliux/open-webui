@@ -322,43 +322,57 @@
 			<h3 class="text-lg font-semibold mb-4">Set Token Limits for {selectedUser?.name || selectedUser?.email}</h3>
 			
 			<div class="space-y-4">
-				<div>
-					<label class="block text-sm font-medium mb-2">Daily Token Limit</label>
-					<Input
-						type="number"
-						bind:value={createForm.daily_token_limit}
-						placeholder="Enter daily limit (optional)"
-					/>
-				</div>
-				
-				<div>
-					<label class="block text-sm font-medium mb-2">Monthly Token Limit</label>
-					<Input
-						type="number"
-						bind:value={createForm.monthly_token_limit}
-						placeholder="Enter monthly limit (optional)"
-					/>
-				</div>
-				
-				<div>
-					<label class="block text-sm font-medium mb-2">Total Token Limit</label>
-					<Input
-						type="number"
-						bind:value={createForm.total_token_limit}
-						placeholder="Enter total limit (optional)"
-					/>
-				</div>
-				
-				<div>
-					<label class="block text-sm font-medium mb-2">Notify at Percentage</label>
-					<Input
-						type="number"
-						bind:value={createForm.notify_at_percentage}
-						min="1"
-						max="100"
-						placeholder="80"
-					/>
-				</div>
+                                {@const createDailyId = 'create-daily-token-limit'}
+                                <div>
+                                        <label class="block text-sm font-medium mb-2" for={createDailyId}>Daily Token Limit</label>
+                                        <Input
+                                                type="number"
+                                                bind:value={createForm.daily_token_limit}
+                                                placeholder="Enter daily limit (optional)"
+                                                id={createDailyId}
+                                        />
+                                </div>
+
+                                {@const createMonthlyId = 'create-monthly-token-limit'}
+                                <div>
+                                        <label class="block text-sm font-medium mb-2" for={createMonthlyId}
+                                                >Monthly Token Limit</label
+                                        >
+                                        <Input
+                                                type="number"
+                                                bind:value={createForm.monthly_token_limit}
+                                                placeholder="Enter monthly limit (optional)"
+                                                id={createMonthlyId}
+                                        />
+                                </div>
+
+                                {@const createTotalId = 'create-total-token-limit'}
+                                <div>
+                                        <label class="block text-sm font-medium mb-2" for={createTotalId}
+                                                >Total Token Limit</label
+                                        >
+                                        <Input
+                                                type="number"
+                                                bind:value={createForm.total_token_limit}
+                                                placeholder="Enter total limit (optional)"
+                                                id={createTotalId}
+                                        />
+                                </div>
+
+                                {@const createNotifyId = 'create-notify-percentage'}
+                                <div>
+                                        <label class="block text-sm font-medium mb-2" for={createNotifyId}
+                                                >Notify at Percentage</label
+                                        >
+                                        <Input
+                                                type="number"
+                                                bind:value={createForm.notify_at_percentage}
+                                                min="1"
+                                                max="100"
+                                                placeholder="80"
+                                                id={createNotifyId}
+                                        />
+                                </div>
 			</div>
 			
 			<div class="flex justify-end space-x-2 mt-6">
@@ -380,48 +394,61 @@
 			<h3 class="text-lg font-semibold mb-4">Edit Token Limits for {selectedUser?.name || selectedUser?.email}</h3>
 			
 			<div class="space-y-4">
-				<div>
-					<label class="block text-sm font-medium mb-2">Daily Token Limit</label>
-					<Input
-						type="number"
-						bind:value={editForm.daily_token_limit}
-						placeholder="Enter daily limit (optional)"
-					/>
-				</div>
-				
-				<div>
-					<label class="block text-sm font-medium mb-2">Monthly Token Limit</label>
-					<Input
-						type="number"
-						bind:value={editForm.monthly_token_limit}
-						placeholder="Enter monthly limit (optional)"
-					/>
-				</div>
-				
-				<div>
-					<label class="block text-sm font-medium mb-2">Total Token Limit</label>
-					<Input
-						type="number"
-						bind:value={editForm.total_token_limit}
-						placeholder="Enter total limit (optional)"
-					/>
-				</div>
-				
-				<div>
-					<label class="block text-sm font-medium mb-2">Notify at Percentage</label>
-					<Input
-						type="number"
-						bind:value={editForm.notify_at_percentage}
-						min="1"
-						max="100"
-						placeholder="80"
-					/>
-				</div>
-				
-				<div class="flex items-center space-x-2">
-					<Switch bind:state={editForm.is_active} />
-					<label class="text-sm font-medium">Active</label>
-				</div>
+                                {@const editDailyId = 'edit-daily-token-limit'}
+                                <div>
+                                        <label class="block text-sm font-medium mb-2" for={editDailyId}>Daily Token Limit</label>
+                                        <Input
+                                                type="number"
+                                                bind:value={editForm.daily_token_limit}
+                                                placeholder="Enter daily limit (optional)"
+                                                id={editDailyId}
+                                        />
+                                </div>
+
+                                {@const editMonthlyId = 'edit-monthly-token-limit'}
+                                <div>
+                                        <label class="block text-sm font-medium mb-2" for={editMonthlyId}
+                                                >Monthly Token Limit</label
+                                        >
+                                        <Input
+                                                type="number"
+                                                bind:value={editForm.monthly_token_limit}
+                                                placeholder="Enter monthly limit (optional)"
+                                                id={editMonthlyId}
+                                        />
+                                </div>
+
+                                {@const editTotalId = 'edit-total-token-limit'}
+                                <div>
+                                        <label class="block text-sm font-medium mb-2" for={editTotalId}>Total Token Limit</label>
+                                        <Input
+                                                type="number"
+                                                bind:value={editForm.total_token_limit}
+                                                placeholder="Enter total limit (optional)"
+                                                id={editTotalId}
+                                        />
+                                </div>
+
+                                {@const editNotifyId = 'edit-notify-percentage'}
+                                <div>
+                                        <label class="block text-sm font-medium mb-2" for={editNotifyId}
+                                                >Notify at Percentage</label
+                                        >
+                                        <Input
+                                                type="number"
+                                                bind:value={editForm.notify_at_percentage}
+                                                min="1"
+                                                max="100"
+                                                placeholder="80"
+                                                id={editNotifyId}
+                                        />
+                                </div>
+
+                                {@const editActiveId = 'edit-token-active'}
+                                <div class="flex items-center space-x-2">
+                                        <Switch bind:state={editForm.is_active} id={editActiveId} />
+                                        <label class="text-sm font-medium" for={editActiveId}>Active</label>
+                                </div>
 			</div>
 			
 			<div class="flex justify-end space-x-2 mt-6">
