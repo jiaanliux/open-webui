@@ -1,12 +1,17 @@
+networks:
+  shared:
+    external: true
+    name: docker_shared_network
+
 services:
-  ollama:
-    volumes:
-      - ollama:/root/.ollama
-    container_name: ollama
-    pull_policy: always
-    tty: true
-    restart: unless-stopped
-    image: ollama/ollama:${OLLAMA_DOCKER_TAG-latest}
+  # ollama:
+  #   volumes:
+  #     - ollama:/root/.ollama
+  #   container_name: ollama
+  #   pull_policy: always
+  #   tty: true
+  #   restart: unless-stopped
+  #   image: ollama/ollama:${OLLAMA_DOCKER_TAG-latest}
 
   # open-webui:
   #   build:
@@ -31,22 +36,23 @@ services:
 
 
   open-webui:
-    image: ghcr.io/jiaanliux/open-webui:latest
+    image: ghcr.io/jiaanliux/open-webui:dev
     container_name: open-webui  
     volumes:  
       - open-webui:/app/backend/data  
-    depends_on:  
-      - ollama  
+    # depends_on:  
+      # - ollama  
     ports:  
       - ${OPEN_WEBUI_PORT-4000}:8080  
     environment:  
-      - 'OLLAMA_BASE_URL=http://ollama:11434'
+      # - 'OLLAMA_BASE_URL=http://ollama:11434'
       - 'WEBUI_SECRET_KEY='  
       - 'WEBUI_NAME=CasaBot - UNU Macau'  
-    extra_hosts:  
-      - host.docker.internal:host-gateway  
+    # extra_hosts:  
+    #   - host.docker.internal:host-gateway  
     restart: unless-stopped
-
+    networks:
+      - shared
 volumes:
-  ollama: {}
+  # ollama: {}
   open-webui: {}
