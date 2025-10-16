@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Setup script for the Open WebUI Token Usage Tracking System
+Setup script for the CasaBot Token Usage Tracking System
 
 This script helps administrators set up initial token limits for users.
 """
@@ -196,7 +196,7 @@ def list_user_limits():
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Setup Open WebUI Token Usage Tracking System")
+    parser = argparse.ArgumentParser(description="Setup CasaBot Token Usage Tracking System")
     parser.add_argument("--setup", action="store_true", help="Set up default token limits for all users")
     parser.add_argument("--list", action="store_true", help="List all users and their current limits")
     parser.add_argument("--user", type=str, help="User ID to set custom limits for")
