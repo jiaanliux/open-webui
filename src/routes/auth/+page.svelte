@@ -398,26 +398,12 @@
 												window.location.href = `${WEBUI_BASE_URL}/oauth/microsoft/login`;
 											}}
 										>
-											<svg
-												xmlns="http://www.w3.org/2000/svg"
-												viewBox="0 0 21 21"
+											<img
+												src="/static/favicon-UN.png"
+												alt="UNU Account"
 												class="size-6 mr-3"
-											>
-												<rect x="1" y="1" width="9" height="9" fill="#f25022" /><rect
-													x="1"
-													y="11"
-													width="9"
-													height="9"
-													fill="#00a4ef"
-												/><rect x="11" y="1" width="9" height="9" fill="#7fba00" /><rect
-													x="11"
-													y="11"
-													width="9"
-													height="9"
-													fill="#ffb900"
-												/>
-											</svg>
-											<span>{$i18n.t('Continue with {{provider}}', { provider: 'Microsoft' })}</span
+											/>
+											<span>Login with UNU Account</span
 											>
 										</button>
 									{/if}
