@@ -401,7 +401,7 @@
 											<img
 												src="/UNU_LOGO_NV.png"
 												alt="UNU Account"
-												class="size-6 mr-3"
+												class="h-6 w-auto mr-3"
 											/>
 											<span>UNU Login</span
 											>
