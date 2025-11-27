@@ -398,13 +398,12 @@
 												window.location.href = `${WEBUI_BASE_URL}/oauth/microsoft/login`;
 											}}
 										>
+											<span>Continue with</span>
 											<img
 												src="/UNU_LOGO_NV.png"
 												alt="UNU Account"
-												class="h-6 w-auto mr-3"
+												class="unu-logo"
 											/>
-											<span>UNU Login</span
-											>
 										</button>
 									{/if}
 									{#if $config?.oauth?.providers?.github}
@@ -506,3 +505,14 @@
 		</div>
 	{/if}
 </div>
+
+<style>
+	.unu-logo {
+		height: 2.5rem;
+		width: auto;
+		margin-left: 0.5rem;
+		margin-top: -1.1rem;
+		margin-bottom: -1rem;
+		margin-left: 0.5rem;
+	}
+</style>
