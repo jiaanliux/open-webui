@@ -399,11 +399,11 @@
 											}}
 										>
 											<img
-												src="/static/UNU_LOGO_NV.png"
+												src="/UNU_LOGO_NV.png"
 												alt="UNU Account"
 												class="size-6 mr-3"
 											/>
-											<span>Login with UNU Account</span
+											<span>UNU Login</span
 											>
 										</button>
 									{/if}
