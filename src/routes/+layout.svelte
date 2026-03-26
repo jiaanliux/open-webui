@@ -949,8 +949,8 @@
 
 		if (backendConfig) {
 			// Save Backend Status to Store
-            await config.set(backendConfig);
-            await WEBUI_NAME.set(APP_NAME);
+			await config.set(backendConfig);
+			await WEBUI_NAME.set(APP_NAME);
 
 			if ($config) {
 				await setupSocket($config.features?.enable_websocket ?? true);
