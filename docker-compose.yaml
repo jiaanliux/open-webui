@@ -30,7 +30,6 @@ services:
   #   restart: unless-stopped
 
 
-  open-webui:
     image: ghcr.io/jiaanliux/open-webui:dev
     container_name: open-webui  
     volumes:  
