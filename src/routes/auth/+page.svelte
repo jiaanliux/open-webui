@@ -467,11 +467,7 @@
 											}}
 										>
 											<span>Continue with</span>
-											<img
-												src="/UNU_LOGO_NV.png"
-												alt="UNU Account"
-												class="unu-logo"
-											/>
+											<img src="/UNU_LOGO_NV.png" alt="UNU Account" class="unu-logo" />
 										</button>
 									{/if}
 									{#if $config?.oauth?.providers?.github}

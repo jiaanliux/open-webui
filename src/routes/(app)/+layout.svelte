@@ -19,7 +19,7 @@
 	import { getTerminalServers } from '$lib/apis/terminal';
 	import { getUserSettings } from '$lib/apis/users';
 
-// Removed update toast: no version check
+	// Removed update toast: no version check
 
 	import {
 		config,
@@ -333,7 +333,7 @@
 			}
 		}
 
-            // Removed version update toast check
+			// Removed version update toast check
 			await tick();
 		// Persist showControls: track open/close state separately from saved size
 		// chatControlsSize always retains the last width for openPane()
