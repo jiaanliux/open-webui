@@ -735,27 +735,27 @@
 								e.stopImmediatePropagation();
 								e.preventDefault();
 
-					setTimeout(() => {
-						if ($mobile) {
-							showSidebar.set(false);
-						}
-					}, 0);
-				}}
-			>
-				<div class="flex items-center">
-					<div class="self-center mx-1.5">
-						<img
-							crossorigin="anonymous"
-							src="{WEBUI_BASE_URL}/static/favicon-UN.png"
-							class="sidebar-new-chat-icon size-5 -translate-x-1.5 rounded-full"
-							alt="logo"
-						/>
-					</div>
-					<div class=" self-center text-sm text-gray-850 dark:text-white font-primary">
-						{$i18n.t('New Chat')}
-					</div>
-				</div>
-			</a>
+								setTimeout(() => {
+									if ($mobile) {
+										showSidebar.set(false);
+									}
+								}, 0);
+							}}
+						>
+							<div class="flex items-center">
+								<div class="self-center mx-1.5">
+									<img
+										crossorigin="anonymous"
+										src="{WEBUI_BASE_URL}/static/favicon-UN.png"
+										class="sidebar-new-chat-icon size-5 -translate-x-1.5 rounded-full"
+										alt="logo"
+									/>
+								</div>
+								<div class=" self-center text-sm text-gray-850 dark:text-white font-primary">
+									{$i18n.t('New Chat')}
+								</div>
+							</div>
+						</a>
 		</Tooltip>
 				</div>
 
@@ -900,7 +900,7 @@
 			: ' bg-transparent z-0 '} {$isApp
 			? `ml-[4.5rem] md:ml-0 `
 			: ' transition-all duration-300 '} shrink-0 text-gray-900 dark:text-gray-200 text-sm fixed top-0 left-0 overflow-x-hidden
-        "
+		"
 		transition:slide={{ duration: 250, axis: 'x' }}
 		data-state={$showSidebar}
 	>

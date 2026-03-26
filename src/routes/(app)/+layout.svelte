@@ -48,7 +48,7 @@
 	import SettingsModal from '$lib/components/chat/SettingsModal.svelte';
 	import ChangelogModal from '$lib/components/ChangelogModal.svelte';
 	import AccountPending from '$lib/components/layout/Overlay/AccountPending.svelte';
-// Removed UpdateInfoToast usage
+	// Removed UpdateInfoToast usage
 	import Spinner from '$lib/components/common/Spinner.svelte';
 	import { Shortcut, shortcuts } from '$lib/shortcuts';
 
@@ -58,7 +58,7 @@
 	let DB = null;
 	let localDBChats = [];
 
-// Removed version state for update toast
+	// Removed version state for update toast
 
 	const clearChatInputStorage = () => {
 		const chatInputKeys = Object.keys(localStorage).filter((key) => key.startsWith('chat-input'));
@@ -333,8 +333,8 @@
 			}
 		}
 
-			// Removed version update toast check
-			await tick();
+		// Removed version update toast check
+		await tick();
 		// Persist showControls: track open/close state separately from saved size
 		// chatControlsSize always retains the last width for openPane()
 		await showControls.set(!$mobile ? localStorage.showControls === 'true' : false);
@@ -357,7 +357,7 @@
 		loaded = true;
 	});
 
-// Removed checkForVersionUpdates
+	// Removed checkForVersionUpdates
 </script>
 
 <SettingsModal bind:show={$showSettings} />
@@ -435,7 +435,7 @@
 				{:else}
 					<div
 						class="w-full flex-1 h-full flex items-center justify-center {$showSidebar
-							? '  md:max-w-[calc(100%-var(--sidebar-width))]'
+							? '	 md:max-w-[calc(100%-var(--sidebar-width))]'
 							: ' '}"
 					>
 						<Spinner className="size-5" />
