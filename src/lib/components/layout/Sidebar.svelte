@@ -751,8 +751,8 @@
 										alt="logo"
 									/>
 								</div>
-								<div class=" self-center text-sm text-gray-850 dark:text-white font-primary">
-									{$i18n.t('New Chat')}
+							<div class=" self-center text-sm text-gray-850 dark:text-white font-primary">
+							{$i18n.t('New Chat')}
 								</div>
 							</div>
 						</a>
