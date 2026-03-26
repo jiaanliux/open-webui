@@ -756,8 +756,8 @@
 								</div>
 							</div>
 						</a>
-		</Tooltip>
-				</div>
+						</Tooltip>
+					</div>
 
 				<div>
 					<Tooltip content={$i18n.t('Search')} placement="right">
