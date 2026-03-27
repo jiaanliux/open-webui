@@ -8,13 +8,14 @@
 4. 或者直接在 Styles 面板中修改 CSS
 
 **快速修改 CSS：**
+
 ```css
 .unu-logo {
-    height: 2.5rem; /* 可以改成 3rem, 3.5rem 等 */
-    width: auto;
-    margin-right: 0.5rem;
-    margin-top: -0.25rem;
-    margin-bottom: -0.25rem;
+	height: 2.5rem; /* 可以改成 3rem, 3.5rem 等 */
+	width: auto;
+	margin-right: 0.5rem;
+	margin-top: -0.25rem;
+	margin-bottom: -0.25rem;
 }
 ```
 
@@ -32,10 +33,10 @@
 ## 方法 3: 本地开发服务器（需要 Node.js）
 
 如果你有 Node.js 环境：
+
 ```bash
 npm install
 npm run dev
 ```
 
 然后在浏览器访问 `http://localhost:5173`，修改会立即生效。
-
