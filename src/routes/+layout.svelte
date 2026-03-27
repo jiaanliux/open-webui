@@ -40,7 +40,6 @@
 	import { getFileContentById } from '$lib/apis/files';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
-	import { Toaster, toast } from 'svelte-sonner';
 
 	import { executeToolServer, getBackendConfig, getModels, getVersion } from '$lib/apis';
 	import { getSessionUser, userSignOut } from '$lib/apis/auths';
@@ -60,16 +59,6 @@
 	import { beforeNavigate } from '$app/navigation';
 	import { updated } from '$app/state';
 
-	import i18n, { initI18n, getLanguages, changeLanguage } from '$lib/i18n';
-
-	import '../tailwind.css';
-	import '../app.css';
-	import 'tippy.js/dist/tippy.css';
-
-	import { executeToolServer, getBackendConfig, getModels, getVersion } from '$lib/apis';
-	import { getSessionUser, userSignOut } from '$lib/apis/auths';
-	import { getAllTags, getChatList } from '$lib/apis/chats';
-	import { chatCompletion } from '$lib/apis/openai';
 	import {
 		addOpenAIConnection,
 		removeOpenAIConnection,
@@ -77,12 +66,7 @@
 		removeTerminalConnection
 	} from '$lib/utils/connections';
 
-	import { WEBUI_API_BASE_URL, WEBUI_BASE_URL, WEBUI_HOSTNAME } from '$lib/constants';
-	import { bestMatchingLanguage, displayFileHandler } from '$lib/utils';
 	import { setTextScale } from '$lib/utils/text-scale';
-
-	import NotificationToast from '$lib/components/NotificationToast.svelte';
-	import AppSidebar from '$lib/components/app/AppSidebar.svelte';
 	import SyncStatsModal from '$lib/components/chat/Settings/SyncStatsModal.svelte';
 	import Spinner from '$lib/components/common/Spinner.svelte';
 	import { getUserSettings } from '$lib/apis/users';
